@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  HotOrCold
+//  Hot or Cold
 //
-//  Created by Liz Parker on 4/27/16.
+//  Created by Liz Parker on 1/20/16.
 //  Copyright © 2016 Liz Parker. All rights reserved.
 //
 
