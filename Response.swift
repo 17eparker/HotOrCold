@@ -15,6 +15,8 @@ class Response {
     var hasWon = false
     var level = "medium"
     var answer = 0
+    var color = "0"
+    // -3 is ice cube, -2 is freexing, -1 is cold, 0 is warm, 1 is hot, 2 is burning hot, 3 is on fire
     
     func generateMediumResponse(guess: Int) -> God  {
         if tries == 0 {
@@ -27,27 +29,36 @@ class Response {
             if diff != 0 {
                 if diff == 1 {
                     responseText = "YOU ARE ON FIRE"
+                    color = "3"
                 } else if 2 <= diff && diff <= 5 {
                     responseText = "BURNING HOT"
+                    color = "2"
                 } else if 90 <= diff && diff <= 99 {
                     responseText = "You're so cold,you're are an ice cube"
+                    color = "-3"
                 } else if 75 <= diff && diff <= 90 {
                     responseText = "Freezing cold"
+                    color = "-2"
                 } else if 6 <= diff && diff <= 14 {
                     responseText = "Hot"
+                    color = "1"
                 } else if 15 <= diff && diff <= 32 {
                     responseText = "Warm"
+                    color = "0"
                 } else {
                     responseText = "Cold"
+                    color = "-1"
                 }
             } else {
                 responseText = "That's the answer! You win! That only took 1 try! Play Again?"
+                color = "0"
                 hasWon = true
             }
             oldGuess = guess
         } else {
             if diff != 0 {
                 if diff == 1 {
+                    color = "3"
                     if diff < findDiff(answer, var2: oldGuess) {
                         responseText = "YOU ARE ON FIRE, and getting warmer."
                     } else {
@@ -55,24 +66,28 @@ class Response {
                         // pic of fire //
                     }
                 } else if 2 <= diff && diff <= 5 {
+                    color = "2"
                     if diff < findDiff(answer, var2: oldGuess) {
                         responseText = "BURNING HOT, and getting warmer."
                     } else {
                         responseText = "BURNING HOT, but getting colder"
                     }
                 } else if 90 <= diff && diff <= 99 {
+                    color = "-3"
                     if diff < findDiff(answer, var2: oldGuess) {
                         responseText = "You're so cold, you're an ice cube, but getting warmer"
                     } else {
                         responseText = "You're so cold, you're an ice cube, and getting colder"
                     }
                 } else if 75 <= diff && diff <= 90 {
+                    color = "-2"
                     if diff < findDiff(answer, var2: oldGuess) {
                         responseText = "Freezing cold, but getting warmer"
                     } else {
                         responseText = "Freezing cold, and getting colder"
                     }
                 } else if 6 <= diff && diff <= 14 {
+                    color = "1"
                     if diff < findDiff(answer, var2: oldGuess) {
                         responseText = "Hot, and getting warmer"
                     } else {
@@ -81,17 +96,20 @@ class Response {
                 } else {
                     if diff < findDiff(answer, var2: oldGuess) {
                         responseText = "Warmer"
+                        color = "0"
                     } else if diff > findDiff(answer, var2: oldGuess) {
                         responseText = "Colder"
+                        color = "-1"
                     }
                 }
             } else {
                 responseText = "That's the answer! You win! That took \(tries) tries. Play again?"
                 hasWon = true
+                color = "0"
             }
             oldGuess = guess
         }
-        let godObject = God(response: responseText, win: hasWon, tryNumber: String(tries))
+        let godObject = God(response: responseText, win: hasWon, tryNumber: String(tries), color: color)
         if hasWon == true {
             totalReset()
         }
@@ -109,27 +127,36 @@ class Response {
             if diff != 0 {
                 if diff == 1 {
                     responseText = "YOU ARE ON FIRE"
+                    color = "3"
                 } else if 2 <= diff && diff <= 3 {
                     responseText = "BURNING HOT"
+                    color = "2"
                 } else if 45 <= diff && diff <= 50 {
                     responseText = "You're so cold,you're are an ice cube"
+                    color = "-3"
                 } else if 35 <= diff && diff <= 44 {
                     responseText = "Freezing cold"
+                    color = "-2"
                 } else if 4 <= diff && diff <= 9 {
                     responseText = "Hot"
+                    color = "1"
                 } else if 10 <= diff && diff <= 22 {
                     responseText = "Warm"
+                    color = "0"
                 } else {
                     responseText = "Cold"
+                    color = "-1"
                 }
             } else {
                 responseText = "That's the answer! You win! That only took 1 try! Play Again?"
                 hasWon = true
+                color = "0"
             }
             oldGuess = guess
         } else {
             if diff != 0 {
                 if diff == 1 {
+                    color = "3"
                     if diff < findDiff(answer, var2: oldGuess) {
                         responseText = "YOU ARE ON FIRE, and getting warmer."
                     } else {
@@ -137,24 +164,28 @@ class Response {
                         // pic of fire //
                     }
                 } else if 2 <= diff && diff <= 3 {
+                    color = "2"
                     if diff < findDiff(answer, var2: oldGuess) {
                         responseText = "BURNING HOT, and getting warmer."
                     } else {
                         responseText = "BURNING HOT, but getting colder"
                     }
                 } else if 45 <= diff && diff <= 50 {
+                    color = "-3"
                     if diff < findDiff(answer, var2: oldGuess) {
                         responseText = "You're so cold, you're an ice cube, but getting warmer"
                     } else {
                         responseText = "You're so cold, you're an ice cube, and getting colder"
                     }
                 } else if 35 <= diff && diff <= 44 {
+                    color = "-2"
                     if diff < findDiff(answer, var2: oldGuess) {
                         responseText = "Freezing cold, but getting warmer"
                     } else {
                         responseText = "Freezing cold, and getting colder"
                     }
                 } else if 4 <= diff && diff <= 9 {
+                    color = "1"
                     if diff < findDiff(answer, var2: oldGuess) {
                         responseText = "Hot, and getting warmer"
                     } else {
@@ -163,17 +194,20 @@ class Response {
                 } else {
                     if diff < findDiff(answer, var2: oldGuess) {
                         responseText = "Warmer"
+                        color = "0"
                     } else if diff > findDiff(answer, var2: oldGuess) {
                         responseText = "Colder"
+                        color = "-1"
                     }
                 }
             } else {
                 responseText = "That's the answer! You win! That took \(tries) tries. Play again?"
                 hasWon = true
+                color = "0"
             }
             oldGuess = guess
         }
-        let godObject = God(response: responseText, win: hasWon, tryNumber: String(tries))
+        let godObject = God(response: responseText, win: hasWon, tryNumber: String(tries), color: color)
         if hasWon == true {
             totalReset()
         }
@@ -192,27 +226,36 @@ class Response {
             if diff != 0 {
                 if diff == 1 {
                     responseText = "YOU ARE ON FIRE"
+                    color = "3"
                 } else if 2 <= diff && diff <= 20 {
                     responseText = "BURNING HOT"
+                    color = "2"
                 } else if 900 <= diff && diff <= 1000 {
                     responseText = "You're so cold,you're are an ice cube"
+                    color = "-3"
                 } else if 650 <= diff && diff <= 899 {
                     responseText = "Freezing cold"
+                    color = "-2"
                 } else if 21 <= diff && diff <= 75 {
                     responseText = "Hot"
+                    color = "1"
                 } else if 76 <= diff && diff <= 150 {
                     responseText = "Warm"
+                    color = "0"
                 } else {
                     responseText = "Cold"
+                    color = "-1"
                 }
             } else {
                 responseText = "That's the answer! You win! That only took 1 try! Play Again?"
                 hasWon = true
+                color = "0"
             }
             oldGuess = guess
         } else {
             if diff != 0 {
                 if diff == 1 {
+                    color = "3"
                     if diff < findDiff(answer, var2: oldGuess) {
                         responseText = "YOU ARE ON FIRE, and getting warmer."
                     } else {
@@ -220,24 +263,28 @@ class Response {
                         // pic of fire //
                     }
                 } else if 2 <= diff && diff <= 20 {
+                    color = "2"
                     if diff < findDiff(answer, var2: oldGuess) {
                         responseText = "BURNING HOT, and getting warmer."
                     } else {
                         responseText = "BURNING HOT, but getting colder"
                     }
                 } else if 900 <= diff && diff <= 1000 {
+                    color = "-3"
                     if diff < findDiff(answer, var2: oldGuess) {
                         responseText = "You're so cold, you're an ice cube, but getting warmer"
                     } else {
                         responseText = "You're so cold, you're an ice cube, and getting colder"
                     }
                 } else if 650 <= diff && diff <= 899 {
+                    color = "-2"
                     if diff < findDiff(answer, var2: oldGuess) {
                         responseText = "Freezing cold, but getting warmer"
                     } else {
                         responseText = "Freezing cold, and getting colder"
                     }
                 } else if 21 <= diff && diff <= 75 {
+                    color = "1"
                     if diff < findDiff(answer, var2: oldGuess) {
                         responseText = "Hot, and getting warmer"
                     } else {
@@ -246,17 +293,20 @@ class Response {
                 } else {
                     if diff < findDiff(answer, var2: oldGuess) {
                         responseText = "Warmer"
+                        color = "0"
                     } else if diff > findDiff(answer, var2: oldGuess) {
                         responseText = "Colder"
+                        color = "-1"
                     }
                 }
             } else {
                 responseText = "That's the answer! You win! That took \(tries) tries. Play again?"
                 hasWon = true
+                color = "0"
             }
             oldGuess = guess
         }
-        let godObject = God(response: responseText, win: hasWon, tryNumber: String(tries))
+        let godObject = God(response: responseText, win: hasWon, tryNumber: String(tries), color: color)
         if hasWon == true {
             totalReset()
         }
@@ -274,6 +324,7 @@ class Response {
         oldGuess = 0
         answer = generateAnswer()
         hasWon = false
+        color = "0"
     }
     
     func generateAnswer () -> Int {

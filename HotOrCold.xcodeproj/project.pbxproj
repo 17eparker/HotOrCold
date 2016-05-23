@@ -24,6 +24,7 @@
 		782401E81CD14B9B000B1026 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 782401E71CD14B9B000B1026 /* Info.plist */; };
 		782401EB1CD14CE6000B1026 /* negativeSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 782401EA1CD14CE6000B1026 /* negativeSound.wav */; };
 		782401ED1CD912CE000B1026 /* winningSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 782401EC1CD912CE000B1026 /* winningSound.mp3 */; };
+		78556FC81CE3B73000F8C510 /* Fire-animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 78556FC71CE3B73000F8C510 /* Fire-animation.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		782401E71CD14B9B000B1026 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		782401EA1CD14CE6000B1026 /* negativeSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = negativeSound.wav; sourceTree = "<group>"; };
 		782401EC1CD912CE000B1026 /* winningSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winningSound.mp3; sourceTree = "<group>"; };
+		78556FC71CE3B73000F8C510 /* Fire-animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Fire-animation.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				782401CC1CD147D7000B1026 /* Assets.xcassets */,
 				782401CD1CD147D7000B1026 /* Base.lproj */,
 				782401CE1CD147D7000B1026 /* FirstTry.swift */,
+				78556FC61CE3B70C00F8C510 /* Animations */,
 				782401E91CD14CD5000B1026 /* Sounds */,
 				782401CF1CD147D7000B1026 /* GameController.swift */,
 				782401D01CD147D7000B1026 /* godVariable.swift */,
@@ -159,6 +162,14 @@
 				782401EA1CD14CE6000B1026 /* negativeSound.wav */,
 			);
 			name = Sounds;
+			sourceTree = "<group>";
+		};
+		78556FC61CE3B70C00F8C510 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				78556FC71CE3B73000F8C510 /* Fire-animation.gif */,
+			);
+			name = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				782401E81CD14B9B000B1026 /* Info.plist in Resources */,
+				78556FC81CE3B73000F8C510 /* Fire-animation.gif in Resources */,
 				782401D91CD147D7000B1026 /* Base.lproj in Resources */,
 				782401D81CD147D7000B1026 /* Assets.xcassets in Resources */,
 				782401E41CD1485D000B1026 /* Main.storyboard in Resources */,

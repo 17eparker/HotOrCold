@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import iAd
 
 class HomeController: UIViewController{
     
@@ -16,6 +17,7 @@ class HomeController: UIViewController{
     var soundOn = true
     
     override func viewDidLoad() {
+        //HomeController.canDisplayBannerAds = true
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -25,9 +27,7 @@ class HomeController: UIViewController{
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func unwindToHomeController(sender: UIStoryboardSegue) {
-        if let settingsController = sender.sourceViewController as? SettingsController {
-        }
+    @IBAction func unwindToHomeController(segue: UIStoryboardSegue) {
     }
 
     

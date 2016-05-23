@@ -24,6 +24,9 @@ class SettingsController: UIViewController {
     
     @IBOutlet weak var soundSwitch: UISwitch!
     
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -63,9 +66,8 @@ class SettingsController: UIViewController {
         }
     }
     
-    @IBAction func cancelButton(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
+   
+    
     
     @IBAction func easyButtonPressed(sender: AnyObject) {
         level = "easy"

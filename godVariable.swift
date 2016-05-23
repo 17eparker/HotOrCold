@@ -12,12 +12,13 @@ class God {
     var response: String
     var win: Bool
     var tryNumber: String
+    var color: String
     
-    init(response: String, win: Bool, tryNumber: String) {
+    init(response: String, win: Bool, tryNumber: String, color: String) {
         self.response = response
         self.win = win
         self.tryNumber = tryNumber
-        
+        self.color = color
     }
     
 }
