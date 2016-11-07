@@ -10,7 +10,6 @@
 		782401B01CD13791000B1026 /* HotOrColdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782401AF1CD13791000B1026 /* HotOrColdTests.swift */; };
 		782401BB1CD13791000B1026 /* HotOrColdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782401BA1CD13791000B1026 /* HotOrColdUITests.swift */; };
 		782401D71CD147D7000B1026 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782401CB1CD147D7000B1026 /* AppDelegate.swift */; };
-		782401D81CD147D7000B1026 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 782401CC1CD147D7000B1026 /* Assets.xcassets */; };
 		782401D91CD147D7000B1026 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 782401CD1CD147D7000B1026 /* Base.lproj */; };
 		782401DA1CD147D7000B1026 /* FirstTry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782401CE1CD147D7000B1026 /* FirstTry.swift */; };
 		782401DB1CD147D7000B1026 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782401CF1CD147D7000B1026 /* GameController.swift */; };
@@ -24,7 +23,13 @@
 		782401E81CD14B9B000B1026 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 782401E71CD14B9B000B1026 /* Info.plist */; };
 		782401EB1CD14CE6000B1026 /* negativeSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 782401EA1CD14CE6000B1026 /* negativeSound.wav */; };
 		782401ED1CD912CE000B1026 /* winningSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 782401EC1CD912CE000B1026 /* winningSound.mp3 */; };
-		78556FC81CE3B73000F8C510 /* Fire-animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 78556FC71CE3B73000F8C510 /* Fire-animation.gif */; };
+		783212B71DD13FC2001CDEB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783212B61DD13FC2001CDEB3 /* Assets.xcassets */; };
+		7865CEFE1DA6D67D00E71B64 /* BestScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7865CEFD1DA6D67D00E71B64 /* BestScoreController.swift */; };
+		787DC3541D789BE9002DDDA8 /* BestScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787DC3531D789BE9002DDDA8 /* BestScore.swift */; };
+		787DC3561D80AD92002DDDA8 /* expansionDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787DC3551D80AD92002DDDA8 /* expansionDefault.swift */; };
+		78A234281D078D2B00BCDF1E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A234271D078D2B00BCDF1E /* iAd.framework */; };
+		78CF494D1DB69F5400D48EFD /* fblogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 78CF494C1DB69F5400D48EFD /* fblogo.png */; };
+		78CF494F1DB69F5A00D48EFD /* twitlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 78CF494E1DB69F5A00D48EFD /* twitlogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +58,6 @@
 		782401BA1CD13791000B1026 /* HotOrColdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotOrColdUITests.swift; sourceTree = "<group>"; };
 		782401BC1CD13791000B1026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		782401CB1CD147D7000B1026 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		782401CC1CD147D7000B1026 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		782401CD1CD147D7000B1026 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		782401CE1CD147D7000B1026 /* FirstTry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTry.swift; sourceTree = "<group>"; };
 		782401CF1CD147D7000B1026 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
@@ -67,7 +71,14 @@
 		782401E71CD14B9B000B1026 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		782401EA1CD14CE6000B1026 /* negativeSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = negativeSound.wav; sourceTree = "<group>"; };
 		782401EC1CD912CE000B1026 /* winningSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winningSound.mp3; sourceTree = "<group>"; };
-		78556FC71CE3B73000F8C510 /* Fire-animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Fire-animation.gif"; sourceTree = "<group>"; };
+		783212B61DD13FC2001CDEB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7865CEFD1DA6D67D00E71B64 /* BestScoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestScoreController.swift; sourceTree = "<group>"; };
+		787DC3531D789BE9002DDDA8 /* BestScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestScore.swift; sourceTree = "<group>"; };
+		787DC3551D80AD92002DDDA8 /* expansionDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = expansionDefault.swift; sourceTree = "<group>"; };
+		78A234251D0781D200BCDF1E /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		78A234271D078D2B00BCDF1E /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		78CF494C1DB69F5400D48EFD /* fblogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fblogo.png; path = Assets.xcassets/fblogo.imageset/fblogo.png; sourceTree = "<group>"; };
+		78CF494E1DB69F5A00D48EFD /* twitlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitlogo.png; path = Assets.xcassets/twitlogo.imageset/twitlogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78A234281D078D2B00BCDF1E /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +110,8 @@
 		7824018E1CD13790000B1026 = {
 			isa = PBXGroup;
 			children = (
+				78A234271D078D2B00BCDF1E /* iAd.framework */,
+				78A234251D0781D200BCDF1E /* GoogleMobileAds.framework */,
 				782401CA1CD147AF000B1026 /* HotOrCold */,
 				782401AE1CD13791000B1026 /* HotOrColdTests */,
 				782401B91CD13791000B1026 /* HotOrColdUITests */,
@@ -137,15 +151,18 @@
 			isa = PBXGroup;
 			children = (
 				782401CB1CD147D7000B1026 /* AppDelegate.swift */,
-				782401CC1CD147D7000B1026 /* Assets.xcassets */,
+				783212B61DD13FC2001CDEB3 /* Assets.xcassets */,
 				782401CD1CD147D7000B1026 /* Base.lproj */,
 				782401CE1CD147D7000B1026 /* FirstTry.swift */,
-				78556FC61CE3B70C00F8C510 /* Animations */,
+				78556FC61CE3B70C00F8C510 /* Images */,
 				782401E91CD14CD5000B1026 /* Sounds */,
 				782401CF1CD147D7000B1026 /* GameController.swift */,
 				782401D01CD147D7000B1026 /* godVariable.swift */,
 				782401D11CD147D7000B1026 /* HomeController.swift */,
 				782401E31CD1485D000B1026 /* Main.storyboard */,
+				7865CEFD1DA6D67D00E71B64 /* BestScoreController.swift */,
+				787DC3551D80AD92002DDDA8 /* expansionDefault.swift */,
+				787DC3531D789BE9002DDDA8 /* BestScore.swift */,
 				782401D31CD147D7000B1026 /* Response.swift */,
 				782401D41CD147D7000B1026 /* RuleController.swift */,
 				782401D51CD147D7000B1026 /* SettingController.swift */,
@@ -164,12 +181,13 @@
 			name = Sounds;
 			sourceTree = "<group>";
 		};
-		78556FC61CE3B70C00F8C510 /* Animations */ = {
+		78556FC61CE3B70C00F8C510 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				78556FC71CE3B73000F8C510 /* Fire-animation.gif */,
+				78CF494E1DB69F5A00D48EFD /* twitlogo.png */,
+				78CF494C1DB69F5400D48EFD /* fblogo.png */,
 			);
-			name = Animations;
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +258,7 @@
 				TargetAttributes = {
 					782401961CD13790000B1026 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = WLG5BW65Y7;
+						DevelopmentTeam = B8C8Q433C7;
 					};
 					782401AA1CD13791000B1026 = {
 						CreatedOnToolsVersion = 7.2;
@@ -279,12 +297,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78CF494F1DB69F5A00D48EFD /* twitlogo.png in Resources */,
+				78CF494D1DB69F5400D48EFD /* fblogo.png in Resources */,
 				782401E81CD14B9B000B1026 /* Info.plist in Resources */,
-				78556FC81CE3B73000F8C510 /* Fire-animation.gif in Resources */,
 				782401D91CD147D7000B1026 /* Base.lproj in Resources */,
-				782401D81CD147D7000B1026 /* Assets.xcassets in Resources */,
 				782401E41CD1485D000B1026 /* Main.storyboard in Resources */,
 				782401ED1CD912CE000B1026 /* winningSound.mp3 in Resources */,
+				783212B71DD13FC2001CDEB3 /* Assets.xcassets in Resources */,
 				782401EB1CD14CE6000B1026 /* negativeSound.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,9 +331,12 @@
 			files = (
 				782401DC1CD147D7000B1026 /* godVariable.swift in Sources */,
 				782401DA1CD147D7000B1026 /* FirstTry.swift in Sources */,
+				7865CEFE1DA6D67D00E71B64 /* BestScoreController.swift in Sources */,
 				782401DB1CD147D7000B1026 /* GameController.swift in Sources */,
 				782401E21CD147D7000B1026 /* ViewController.swift in Sources */,
+				787DC3541D789BE9002DDDA8 /* BestScore.swift in Sources */,
 				782401D71CD147D7000B1026 /* AppDelegate.swift in Sources */,
+				787DC3561D80AD92002DDDA8 /* expansionDefault.swift in Sources */,
 				782401E11CD147D7000B1026 /* SettingController.swift in Sources */,
 				782401E01CD147D7000B1026 /* RuleController.swift in Sources */,
 				782401DF1CD147D7000B1026 /* Response.swift in Sources */,
@@ -441,13 +463,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = B8C8Q433C7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Base.lproj/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Castilleja.HotOrCold;
+				PRODUCT_BUNDLE_IDENTIFIER = com.parker.hotorcold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -455,12 +484,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = B8C8Q433C7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Base.lproj/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Castilleja.HotOrCold;
+				PRODUCT_BUNDLE_IDENTIFIER = com.parker.hotorcold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

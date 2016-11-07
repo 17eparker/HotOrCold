@@ -7,18 +7,18 @@
 //
 
 import UIKit
-import iAd
+
 
 class HomeController: UIViewController{
-    
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
+    
     var level = "medium"
     var soundOn = true
     
     override func viewDidLoad() {
-        //HomeController.canDisplayBannerAds = true
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     

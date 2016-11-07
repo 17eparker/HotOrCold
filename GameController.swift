@@ -20,13 +20,21 @@ class GameController: UIViewController, AVAudioPlayerDelegate {
     
     @IBOutlet weak var lastGuessLabel: UILabel!
     
+    @IBOutlet weak var lastGuessTextLabel: UILabel!
     @IBOutlet weak var triesLabel: UILabel!
     
+    @IBOutlet weak var numTriesTextLabel: UILabel!
     @IBOutlet weak var inputLabel: UILabel!
     
-    @IBOutlet weak var twitterButton: UIButton!
-    
     @IBOutlet weak var facebookButton: UIButton!
+
+    
+    @IBOutlet weak var twitterButton: UIButton!
+
+    
+    @IBOutlet weak var deleteButton: UIButton!
+    
+    @IBOutlet weak var bestScoreLabel: UILabel!
     
     let response = Response()
     var guess = 0
@@ -40,24 +48,46 @@ class GameController: UIViewController, AVAudioPlayerDelegate {
     var tryNumber = "0"
     var color = "0"
     var globalWin = false
+    var expansionPack = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
         if level == "easy" {
             responseLabel.text = "Guess a number between 0 and 50"
             levelLabel.text = "Easy"
+            levelLabel.backgroundColor = UIColor(red: 59/255, green: 188/255, blue: 194/255, alpha:1)
+            if BestScore.useBestScore("easy") == 0 {
+                bestScoreLabel.text = "N/A"
+            } else {
+                bestScoreLabel.text = String(BestScore.useBestScore("easy"))
+            }
         } else if level == "medium" {
             responseLabel.text = "Guess a number between 0 and 100"
             levelLabel.text = "Medium"
-        } else {
+            levelLabel.backgroundColor = UIColor(red: 255/255, green: 159/255, blue: 77/255, alpha:1)
+            if BestScore.useBestScore("medium") == 0 {
+                bestScoreLabel.text = "N/A"
+            } else {
+                bestScoreLabel.text = String(BestScore.useBestScore("medium"))
+            }
+        } else if level == "hard" {
             responseLabel.text = "Guess a number between 0 and 1000"
             levelLabel.text = "Hard"
+            levelLabel.backgroundColor = UIColor(red: 255/255, green: 86/255, blue: 77/255, alpha:1)
+            if BestScore.useBestScore("hard") == 0 {
+                bestScoreLabel.text = "N/A"
+            } else {
+                bestScoreLabel.text = String(BestScore.useBestScore("hard"))
+            }
+        } else {
+            responseLabel.text = "Guess a number between 0 and 5000"
+            levelLabel.text = "Extreme"
         }
+    }
+
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     override func didReceiveMemoryWarning() {
@@ -74,28 +104,54 @@ class GameController: UIViewController, AVAudioPlayerDelegate {
                 godObject = response.generateHardResponse(guess)
             } else if level == "easy" {
                 godObject = response.generateEasyResponse(guess)
-            } else {
+            } else if level == "medium" {
                 godObject = response.generateMediumResponse(guess)
+            } else {
+                godObject = response.generateExtremeResponse(guess)
             }
             responseLabel.text = godObject.response
             triesLabel.text = godObject.tryNumber
             if godObject.color == "-3" {
-                responseLabel.textColor = UIColor.blueColor()
+                responseLabel.textColor = UIColor(red: 0, green: 96/255, blue: 100/255, alpha: 1)
             } else if godObject.color == "-2" {
-                responseLabel.textColor = UIColor.cyanColor()
+                responseLabel.textColor = UIColor(red: 59/255, green: 188/255, blue: 194/255, alpha: 1)
             } else if godObject.color == "-1" {
-                responseLabel.textColor = UIColor.greenColor()
+                responseLabel.textColor = UIColor(red: 67/255, green: 221/255, blue: 86/255, alpha: 1)
             } else if godObject.color == "1" {
-                responseLabel.textColor = UIColor.orangeColor()
+                responseLabel.textColor = UIColor(red: 255/255, green: 159/255, blue: 77/255, alpha: 1)
             } else if godObject.color == "2" {
-                responseLabel.textColor = UIColor.magentaColor()
+                responseLabel.textColor = UIColor(red: 255/255, green: 86/255, blue: 77/255, alpha: 1)
             } else if godObject.color == "3" {
-                responseLabel.textColor = UIColor.redColor()
+                responseLabel.textColor = UIColor(red: 165/255, green: 8/255, blue: 0, alpha: 1)
             } else {
                 responseLabel.textColor = UIColor.blackColor()
             }
             if godObject.win == true {
                 self.tryNumber = godObject.tryNumber
+                if level == "easy" {
+                    if BestScore.checkBestScore((Int(self.tryNumber))!, level: "easy") {
+                        BestScore.setBestScoreEasy((Int(self.tryNumber))!)
+                        bestScoreLabel.text = String(BestScore.useBestScore("easy"))
+                    }
+                } else if level == "medium" {
+                    if BestScore.checkBestScore((Int(self.tryNumber))!, level: "medium") {
+                        BestScore.setBestScoreMedium((Int(self.tryNumber))!)
+                        bestScoreLabel.text = String(BestScore.useBestScore("medium"))
+                    }
+                } else if level == "hard" {
+                    if BestScore.checkBestScore((Int(self.tryNumber))!, level: "hard") {
+                        BestScore.setBestScoreHard((Int(self.tryNumber))!)
+                        bestScoreLabel.text = String(BestScore.useBestScore("hard"))                    }
+                } else {
+                    if BestScore.checkBestScore((Int(self.tryNumber))!, level: "extreme") {BestScore.setBestScoreExtreme((Int(self.tryNumber))!)
+                    }
+                }
+                lastGuessLabel.hidden = true
+                triesLabel.hidden = true
+                lastGuessTextLabel.hidden = true
+                numTriesTextLabel.hidden = true
+                deleteButton.hidden = true
+                inputLabel.hidden = true
                 twitterButton.hidden = false
                 facebookButton.hidden = false
                 if soundOn == true {
@@ -117,6 +173,12 @@ class GameController: UIViewController, AVAudioPlayerDelegate {
             triesLabel.text = "0"
             twitterButton.hidden = true
             facebookButton.hidden = true
+            lastGuessLabel.hidden = false
+            triesLabel.hidden = false
+            lastGuessTextLabel.hidden = false
+            numTriesTextLabel.hidden = false
+            deleteButton.hidden = false
+            inputLabel.hidden = false
             globalWin = false
             if level == "easy" {
                 responseLabel.text = "Guess a number between 0 and 50"
@@ -192,14 +254,15 @@ class GameController: UIViewController, AVAudioPlayerDelegate {
                 guess = 0
                 inputLabel.text = String(guess)
             } else {
-                responseLabel.text = "This is a bug. pls tell Liz!"
+                responseLabel.text = "This is a bug. pls tell App Developer!"
             }
         }
     }
+
     
     @IBAction func deleteButtonClicked(sender: UIButton) {
-        inputLabel.text = "0"
-        guess = 0
+            inputLabel.text = "0"
+            guess = 0
     }
     
     @IBAction func twitterButtonClicked(sender: AnyObject) {
@@ -218,6 +281,7 @@ class GameController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
+
     @IBAction func facebookButtonClicked(sender: AnyObject) {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
             let fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)

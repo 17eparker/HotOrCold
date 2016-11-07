@@ -26,7 +26,13 @@ class SettingsController: UIViewController {
     
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     
+    @IBOutlet weak var easyButton: UIButton!
     
+    @IBOutlet weak var mediumButton: UIButton!
+    
+    @IBOutlet weak var hardButton: UIButton!
+    
+// fix colors!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
