@@ -20,14 +20,12 @@
 		782401E11CD147D7000B1026 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782401D51CD147D7000B1026 /* SettingController.swift */; };
 		782401E21CD147D7000B1026 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782401D61CD147D7000B1026 /* ViewController.swift */; };
 		782401E41CD1485D000B1026 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782401E31CD1485D000B1026 /* Main.storyboard */; };
-		782401E81CD14B9B000B1026 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 782401E71CD14B9B000B1026 /* Info.plist */; };
 		782401EB1CD14CE6000B1026 /* negativeSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 782401EA1CD14CE6000B1026 /* negativeSound.wav */; };
 		782401ED1CD912CE000B1026 /* winningSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 782401EC1CD912CE000B1026 /* winningSound.mp3 */; };
 		783212B71DD13FC2001CDEB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783212B61DD13FC2001CDEB3 /* Assets.xcassets */; };
 		7865CEFE1DA6D67D00E71B64 /* BestScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7865CEFD1DA6D67D00E71B64 /* BestScoreController.swift */; };
 		787DC3541D789BE9002DDDA8 /* BestScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787DC3531D789BE9002DDDA8 /* BestScore.swift */; };
 		787DC3561D80AD92002DDDA8 /* expansionDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787DC3551D80AD92002DDDA8 /* expansionDefault.swift */; };
-		78A234281D078D2B00BCDF1E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A234271D078D2B00BCDF1E /* iAd.framework */; };
 		78CF494D1DB69F5400D48EFD /* fblogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 78CF494C1DB69F5400D48EFD /* fblogo.png */; };
 		78CF494F1DB69F5A00D48EFD /* twitlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 78CF494E1DB69F5A00D48EFD /* twitlogo.png */; };
 /* End PBXBuildFile section */
@@ -68,15 +66,12 @@
 		782401D51CD147D7000B1026 /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		782401D61CD147D7000B1026 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		782401E31CD1485D000B1026 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		782401E71CD14B9B000B1026 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		782401EA1CD14CE6000B1026 /* negativeSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = negativeSound.wav; sourceTree = "<group>"; };
 		782401EC1CD912CE000B1026 /* winningSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winningSound.mp3; sourceTree = "<group>"; };
 		783212B61DD13FC2001CDEB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7865CEFD1DA6D67D00E71B64 /* BestScoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestScoreController.swift; sourceTree = "<group>"; };
 		787DC3531D789BE9002DDDA8 /* BestScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestScore.swift; sourceTree = "<group>"; };
 		787DC3551D80AD92002DDDA8 /* expansionDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = expansionDefault.swift; sourceTree = "<group>"; };
-		78A234251D0781D200BCDF1E /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		78A234271D078D2B00BCDF1E /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		78CF494C1DB69F5400D48EFD /* fblogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fblogo.png; path = Assets.xcassets/fblogo.imageset/fblogo.png; sourceTree = "<group>"; };
 		78CF494E1DB69F5A00D48EFD /* twitlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitlogo.png; path = Assets.xcassets/twitlogo.imageset/twitlogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,7 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78A234281D078D2B00BCDF1E /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,8 +104,6 @@
 		7824018E1CD13790000B1026 = {
 			isa = PBXGroup;
 			children = (
-				78A234271D078D2B00BCDF1E /* iAd.framework */,
-				78A234251D0781D200BCDF1E /* GoogleMobileAds.framework */,
 				782401CA1CD147AF000B1026 /* HotOrCold */,
 				782401AE1CD13791000B1026 /* HotOrColdTests */,
 				782401B91CD13791000B1026 /* HotOrColdUITests */,
@@ -167,7 +159,6 @@
 				782401D41CD147D7000B1026 /* RuleController.swift */,
 				782401D51CD147D7000B1026 /* SettingController.swift */,
 				782401D61CD147D7000B1026 /* ViewController.swift */,
-				782401E71CD14B9B000B1026 /* Info.plist */,
 			);
 			name = HotOrCold;
 			sourceTree = "<group>";
@@ -253,7 +244,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Liz Parker";
 				TargetAttributes = {
 					782401961CD13790000B1026 = {
@@ -299,7 +290,6 @@
 			files = (
 				78CF494F1DB69F5A00D48EFD /* twitlogo.png in Resources */,
 				78CF494D1DB69F5400D48EFD /* fblogo.png in Resources */,
-				782401E81CD14B9B000B1026 /* Info.plist in Resources */,
 				782401D91CD147D7000B1026 /* Base.lproj in Resources */,
 				782401E41CD1485D000B1026 /* Main.storyboard in Resources */,
 				782401ED1CD912CE000B1026 /* winningSound.mp3 in Resources */,
@@ -389,8 +379,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -434,8 +426,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -454,6 +448,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
