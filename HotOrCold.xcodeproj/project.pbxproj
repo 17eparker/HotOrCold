@@ -11,7 +11,6 @@
 		782401BB1CD13791000B1026 /* HotOrColdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782401BA1CD13791000B1026 /* HotOrColdUITests.swift */; };
 		782401D71CD147D7000B1026 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782401CB1CD147D7000B1026 /* AppDelegate.swift */; };
 		782401D91CD147D7000B1026 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 782401CD1CD147D7000B1026 /* Base.lproj */; };
-		782401DA1CD147D7000B1026 /* FirstTry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782401CE1CD147D7000B1026 /* FirstTry.swift */; };
 		782401DB1CD147D7000B1026 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782401CF1CD147D7000B1026 /* GameController.swift */; };
 		782401DC1CD147D7000B1026 /* godVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782401D01CD147D7000B1026 /* godVariable.swift */; };
 		782401DD1CD147D7000B1026 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782401D11CD147D7000B1026 /* HomeController.swift */; };
@@ -25,7 +24,6 @@
 		783212B71DD13FC2001CDEB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783212B61DD13FC2001CDEB3 /* Assets.xcassets */; };
 		7865CEFE1DA6D67D00E71B64 /* BestScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7865CEFD1DA6D67D00E71B64 /* BestScoreController.swift */; };
 		787DC3541D789BE9002DDDA8 /* BestScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787DC3531D789BE9002DDDA8 /* BestScore.swift */; };
-		787DC3561D80AD92002DDDA8 /* expansionDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787DC3551D80AD92002DDDA8 /* expansionDefault.swift */; };
 		78CF494D1DB69F5400D48EFD /* fblogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 78CF494C1DB69F5400D48EFD /* fblogo.png */; };
 		78CF494F1DB69F5A00D48EFD /* twitlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 78CF494E1DB69F5A00D48EFD /* twitlogo.png */; };
 /* End PBXBuildFile section */
@@ -57,7 +55,6 @@
 		782401BC1CD13791000B1026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		782401CB1CD147D7000B1026 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		782401CD1CD147D7000B1026 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
-		782401CE1CD147D7000B1026 /* FirstTry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTry.swift; sourceTree = "<group>"; };
 		782401CF1CD147D7000B1026 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		782401D01CD147D7000B1026 /* godVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = godVariable.swift; sourceTree = "<group>"; };
 		782401D11CD147D7000B1026 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -71,7 +68,6 @@
 		783212B61DD13FC2001CDEB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7865CEFD1DA6D67D00E71B64 /* BestScoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestScoreController.swift; sourceTree = "<group>"; };
 		787DC3531D789BE9002DDDA8 /* BestScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestScore.swift; sourceTree = "<group>"; };
-		787DC3551D80AD92002DDDA8 /* expansionDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = expansionDefault.swift; sourceTree = "<group>"; };
 		78CF494C1DB69F5400D48EFD /* fblogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fblogo.png; path = Assets.xcassets/fblogo.imageset/fblogo.png; sourceTree = "<group>"; };
 		78CF494E1DB69F5A00D48EFD /* twitlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitlogo.png; path = Assets.xcassets/twitlogo.imageset/twitlogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,7 +141,6 @@
 				782401CB1CD147D7000B1026 /* AppDelegate.swift */,
 				783212B61DD13FC2001CDEB3 /* Assets.xcassets */,
 				782401CD1CD147D7000B1026 /* Base.lproj */,
-				782401CE1CD147D7000B1026 /* FirstTry.swift */,
 				78556FC61CE3B70C00F8C510 /* Images */,
 				782401E91CD14CD5000B1026 /* Sounds */,
 				782401CF1CD147D7000B1026 /* GameController.swift */,
@@ -153,7 +148,6 @@
 				782401D11CD147D7000B1026 /* HomeController.swift */,
 				782401E31CD1485D000B1026 /* Main.storyboard */,
 				7865CEFD1DA6D67D00E71B64 /* BestScoreController.swift */,
-				787DC3551D80AD92002DDDA8 /* expansionDefault.swift */,
 				787DC3531D789BE9002DDDA8 /* BestScore.swift */,
 				782401D31CD147D7000B1026 /* Response.swift */,
 				782401D41CD147D7000B1026 /* RuleController.swift */,
@@ -191,6 +185,7 @@
 				782401931CD13790000B1026 /* Sources */,
 				782401941CD13790000B1026 /* Frameworks */,
 				782401951CD13790000B1026 /* Resources */,
+				78D7995E1DEC95B000CFFF18 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -314,19 +309,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		78D7995E1DEC95B000CFFF18 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		782401931CD13790000B1026 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				782401DC1CD147D7000B1026 /* godVariable.swift in Sources */,
-				782401DA1CD147D7000B1026 /* FirstTry.swift in Sources */,
 				7865CEFE1DA6D67D00E71B64 /* BestScoreController.swift in Sources */,
 				782401DB1CD147D7000B1026 /* GameController.swift in Sources */,
 				782401E21CD147D7000B1026 /* ViewController.swift in Sources */,
 				787DC3541D789BE9002DDDA8 /* BestScore.swift in Sources */,
 				782401D71CD147D7000B1026 /* AppDelegate.swift in Sources */,
-				787DC3561D80AD92002DDDA8 /* expansionDefault.swift in Sources */,
 				782401E11CD147D7000B1026 /* SettingController.swift in Sources */,
 				782401E01CD147D7000B1026 /* RuleController.swift in Sources */,
 				782401DF1CD147D7000B1026 /* Response.swift in Sources */,
