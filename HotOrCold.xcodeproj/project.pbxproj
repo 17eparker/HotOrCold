@@ -21,6 +21,7 @@
 		782401E41CD1485D000B1026 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782401E31CD1485D000B1026 /* Main.storyboard */; };
 		782401EB1CD14CE6000B1026 /* negativeSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 782401EA1CD14CE6000B1026 /* negativeSound.wav */; };
 		782401ED1CD912CE000B1026 /* winningSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 782401EC1CD912CE000B1026 /* winningSound.mp3 */; };
+		7829E8851DED2E8800755D83 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7829E8841DED2E8800755D83 /* Info.plist */; };
 		783212B71DD13FC2001CDEB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783212B61DD13FC2001CDEB3 /* Assets.xcassets */; };
 		7865CEFE1DA6D67D00E71B64 /* BestScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7865CEFD1DA6D67D00E71B64 /* BestScoreController.swift */; };
 		787DC3541D789BE9002DDDA8 /* BestScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787DC3531D789BE9002DDDA8 /* BestScore.swift */; };
@@ -65,6 +66,7 @@
 		782401E31CD1485D000B1026 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		782401EA1CD14CE6000B1026 /* negativeSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = negativeSound.wav; sourceTree = "<group>"; };
 		782401EC1CD912CE000B1026 /* winningSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winningSound.mp3; sourceTree = "<group>"; };
+		7829E8841DED2E8800755D83 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../../Downloads/Info.plist; sourceTree = "<group>"; };
 		783212B61DD13FC2001CDEB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7865CEFD1DA6D67D00E71B64 /* BestScoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestScoreController.swift; sourceTree = "<group>"; };
 		787DC3531D789BE9002DDDA8 /* BestScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestScore.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		782401CA1CD147AF000B1026 /* HotOrCold */ = {
 			isa = PBXGroup;
 			children = (
+				7829E8841DED2E8800755D83 /* Info.plist */,
 				782401CB1CD147D7000B1026 /* AppDelegate.swift */,
 				783212B61DD13FC2001CDEB3 /* Assets.xcassets */,
 				782401CD1CD147D7000B1026 /* Base.lproj */,
@@ -249,11 +252,13 @@
 					782401AA1CD13791000B1026 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = WLG5BW65Y7;
+						LastSwiftMigration = 0810;
 						TestTargetID = 782401961CD13790000B1026;
 					};
 					782401B51CD13791000B1026 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = WLG5BW65Y7;
+						LastSwiftMigration = 0810;
 						TestTargetID = 782401961CD13790000B1026;
 					};
 				};
@@ -283,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7829E8851DED2E8800755D83 /* Info.plist in Resources */,
 				78CF494F1DB69F5A00D48EFD /* twitlogo.png in Resources */,
 				78CF494D1DB69F5400D48EFD /* fblogo.png in Resources */,
 				782401D91CD147D7000B1026 /* Base.lproj in Resources */,
@@ -475,7 +481,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Base.lproj/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/../../../../Downloads/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.parker.hotorcold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,7 +502,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Base.lproj/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/../../../../Downloads/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.parker.hotorcold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -512,6 +518,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Castilleja.HotOrColdTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HotOrCold.app/HotOrCold";
 			};
 			name = Debug;
@@ -524,6 +531,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Castilleja.HotOrColdTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HotOrCold.app/HotOrCold";
 			};
 			name = Release;
@@ -535,6 +543,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Castilleja.HotOrColdUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = HotOrCold;
 				USES_XCTRUNNER = YES;
 			};
@@ -547,6 +556,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Castilleja.HotOrColdUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = HotOrCold;
 				USES_XCTRUNNER = YES;
 			};
