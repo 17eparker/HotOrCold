@@ -248,17 +248,18 @@
 					782401961CD13790000B1026 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = B8C8Q433C7;
+						LastSwiftMigration = 0830;
 					};
 					782401AA1CD13791000B1026 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = WLG5BW65Y7;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0830;
 						TestTargetID = 782401961CD13790000B1026;
 					};
 					782401B51CD13791000B1026 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = WLG5BW65Y7;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0830;
 						TestTargetID = 782401961CD13790000B1026;
 					};
 				};
@@ -486,7 +487,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.parker.hotorcold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -506,7 +507,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.parker.hotorcold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -518,7 +519,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Castilleja.HotOrColdTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HotOrCold.app/HotOrCold";
 			};
 			name = Debug;
@@ -531,7 +532,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Castilleja.HotOrColdTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HotOrCold.app/HotOrCold";
 			};
 			name = Release;
@@ -543,7 +544,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Castilleja.HotOrColdUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = HotOrCold;
 				USES_XCTRUNNER = YES;
 			};
@@ -556,7 +557,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Castilleja.HotOrColdUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = HotOrCold;
 				USES_XCTRUNNER = YES;
 			};

@@ -38,7 +38,7 @@ class SettingsController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if soundOn == true {
             soundSwitch.setOn(true, animated: true)
@@ -46,17 +46,17 @@ class SettingsController: UIViewController {
             soundSwitch.setOn(false, animated: true)
         }
         if level == "easy" {
-            easyArrow.hidden = false
-            mediumArrow.hidden = true
-            hardArrow.hidden = true
+            easyArrow.isHidden = false
+            mediumArrow.isHidden = true
+            hardArrow.isHidden = true
         } else if level == "medium" {
-            easyArrow.hidden = true
-            mediumArrow.hidden = false
-            hardArrow.hidden = true
+            easyArrow.isHidden = true
+            mediumArrow.isHidden = false
+            hardArrow.isHidden = true
         } else {
-            easyArrow.hidden = true
-            mediumArrow.hidden = true
-            hardArrow.hidden = false
+            easyArrow.isHidden = true
+            mediumArrow.isHidden = true
+            hardArrow.isHidden = false
         }
     }
     
@@ -64,7 +64,7 @@ class SettingsController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func soundSwitchTapped(sender: AnyObject) {
+    @IBAction func soundSwitchTapped(_ sender: AnyObject) {
         if soundOn == true {
             soundOn = false
         } else {
@@ -75,32 +75,32 @@ class SettingsController: UIViewController {
    
     
     
-    @IBAction func easyButtonPressed(sender: AnyObject) {
+    @IBAction func easyButtonPressed(_ sender: AnyObject) {
         level = "easy"
-        easyArrow.hidden = false
-        mediumArrow.hidden = true
-        hardArrow.hidden = true
+        easyArrow.isHidden = false
+        mediumArrow.isHidden = true
+        hardArrow.isHidden = true
         
     }
     
-    @IBAction func mediumButtonPressed(sender: AnyObject) {
+    @IBAction func mediumButtonPressed(_ sender: AnyObject) {
         level = "medium"
-        easyArrow.hidden = true
-        mediumArrow.hidden = false
-        hardArrow.hidden = true
+        easyArrow.isHidden = true
+        mediumArrow.isHidden = false
+        hardArrow.isHidden = true
     }
     
 
-    @IBAction func hardButtonPressed(sender: AnyObject) {
+    @IBAction func hardButtonPressed(_ sender: AnyObject) {
         level = "hard"
-        easyArrow.hidden = true
-        mediumArrow.hidden = true
-        hardArrow.hidden = false
+        easyArrow.isHidden = true
+        mediumArrow.isHidden = true
+        hardArrow.isHidden = false
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    func prepare(for segue: UIStoryboardSegue, sender: UIButton?) {
         if saveButton === sender {
-            if let homeController = segue.destinationViewController as? HomeController {
+            if let homeController = segue.destination as? HomeController {
                     homeController.level = self.level
                     homeController.soundOn = self.soundOn
             }

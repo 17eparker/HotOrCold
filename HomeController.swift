@@ -27,18 +27,22 @@ class HomeController: UIViewController{
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func unwindToHomeController(segue: UIStoryboardSegue) {
+    @IBAction func unwindToHomeController(_ segue: UIStoryboardSegue) {
     }
 
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if settingsButton === sender {
-            if let settingsController = segue.destinationViewController as? SettingsController {
+    func prepare(for segue: UIStoryboardSegue, sender: UIButton?) {
+        if settingsButton == sender {
+            if let settingsController = segue.destination as? SettingsController {
                 settingsController.level = self.level
                 settingsController.soundOn = self.soundOn
             }
-        } else if playButton === sender {
-            if let gameController = segue.destinationViewController as? GameController {
+        }
+    }
+    
+    func prepare2(for segue: UIStoryboardSegue, sender: UIBarButtonItem?) {
+       if playButton == sender {
+            if let gameController = segue.destination as? GameController {
                 gameController.level = self.level
                 gameController.soundOn = self.soundOn
             }

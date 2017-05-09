@@ -86,7 +86,7 @@ class GameController: UIViewController, AVAudioPlayerDelegate {
     }
 
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
@@ -97,7 +97,7 @@ class GameController: UIViewController, AVAudioPlayerDelegate {
     
     
     @IBOutlet weak var EnterPlayAgainButton: UIButton!
-    @IBAction func enterClicked(sender: UIButton) {
+    @IBAction func enterClicked(_ sender: UIButton) {
         var godObject: God
         if displayingEnter == true {
             if level == "hard" {
@@ -124,7 +124,7 @@ class GameController: UIViewController, AVAudioPlayerDelegate {
             } else if godObject.color == "3" {
                 responseLabel.textColor = UIColor(red: 165/255, green: 8/255, blue: 0, alpha: 1)
             } else {
-                responseLabel.textColor = UIColor.blackColor()
+                responseLabel.textColor = UIColor.black
             }
             if godObject.win == true {
                 self.tryNumber = godObject.tryNumber
@@ -146,21 +146,21 @@ class GameController: UIViewController, AVAudioPlayerDelegate {
                     if BestScore.checkBestScore((Int(self.tryNumber))!, level: "extreme") {BestScore.setBestScoreExtreme((Int(self.tryNumber))!)
                     }
                 }
-                lastGuessLabel.hidden = true
-                triesLabel.hidden = true
-                lastGuessTextLabel.hidden = true
-                numTriesTextLabel.hidden = true
-                deleteButton.hidden = true
-                inputLabel.hidden = true
-                twitterButton.hidden = false
-                facebookButton.hidden = false
+                lastGuessLabel.isHidden = true
+                triesLabel.isHidden = true
+                lastGuessTextLabel.isHidden = true
+                numTriesTextLabel.isHidden = true
+                deleteButton.isHidden = true
+                inputLabel.isHidden = true
+                twitterButton.isHidden = false
+                facebookButton.isHidden = false
                 if soundOn == true {
                     playWinningSound()
                 }
-                EnterPlayAgainButton.setTitle("Yes", forState: .Normal)
+                EnterPlayAgainButton.setTitle("Yes", for: UIControlState())
                 displayingEnter = false
                 color = "0"
-                responseLabel.textColor = UIColor.blackColor()
+                responseLabel.textColor = UIColor.black
                 globalWin = true
             } else {
                 if soundOn == true {
@@ -168,17 +168,17 @@ class GameController: UIViewController, AVAudioPlayerDelegate {
                 }
             }
         } else {
-            EnterPlayAgainButton.setTitle("Enter", forState: .Normal)
+            EnterPlayAgainButton.setTitle("Enter", for: UIControlState())
             displayingEnter = true
             triesLabel.text = "0"
-            twitterButton.hidden = true
-            facebookButton.hidden = true
-            lastGuessLabel.hidden = false
-            triesLabel.hidden = false
-            lastGuessTextLabel.hidden = false
-            numTriesTextLabel.hidden = false
-            deleteButton.hidden = false
-            inputLabel.hidden = false
+            twitterButton.isHidden = true
+            facebookButton.isHidden = true
+            lastGuessLabel.isHidden = false
+            triesLabel.isHidden = false
+            lastGuessTextLabel.isHidden = false
+            numTriesTextLabel.isHidden = false
+            deleteButton.isHidden = false
+            inputLabel.isHidden = false
             globalWin = false
             if level == "easy" {
                 responseLabel.text = "Guess a number between 0 and 50"
@@ -194,7 +194,7 @@ class GameController: UIViewController, AVAudioPlayerDelegate {
         reset()
     }
     
-    @IBAction func oneButtonClicked(sender: UIButton) {
+    @IBAction func oneButtonClicked(_ sender: UIButton) {
         if globalWin == false {
             if guess == 0 {
                 inputLabel.text = sender.titleLabel!.text
@@ -213,13 +213,13 @@ class GameController: UIViewController, AVAudioPlayerDelegate {
                 inputLabel.text = String(guess)
             } else if guess == 10 && Int(sender.titleLabel!.text!)! != 0 && level == "medium" {
                 color = "0"
-                responseLabel.textColor = UIColor.blackColor()
+                responseLabel.textColor = UIColor.black
                 responseLabel.text = "You may only guess a number between 0 and 100"
                 guess = 0
                 inputLabel.text = String(guess)
             } else if guess > 10 && level == "medium" {
                 color = "0"
-                responseLabel.textColor = UIColor.blackColor()
+                responseLabel.textColor = UIColor.black
                 responseLabel.text = "You may only guess a number between 0 and 100"
                 guess = 0
                 inputLabel.text = String(guess)
@@ -231,25 +231,25 @@ class GameController: UIViewController, AVAudioPlayerDelegate {
                 inputLabel.text = String(guess)
             } else if guess > 100 && level == "hard" {
                 color = "0"
-                responseLabel.textColor = UIColor.blackColor()
+                responseLabel.textColor = UIColor.black
                 responseLabel.text = "You may only guess a number between 0 and 1000"
                 guess = 0
                 inputLabel.text = String(guess)
             } else if guess == 5 && Int(sender.titleLabel!.text!)! != 0 && level == "easy" {
                 color = "0"
-                responseLabel.textColor = UIColor.blackColor()
+                responseLabel.textColor = UIColor.black
                 responseLabel.text = "You may only guess a number between 0 and 50"
                 guess = 0
                 inputLabel.text = String(guess)
             } else if guess > 5 && level == "easy" {
                 color = "0"
-                responseLabel.textColor = UIColor.blackColor()
+                responseLabel.textColor = UIColor.black
                 responseLabel.text = "You may only guess a number between 0 and 50"
                 guess = 0
                 inputLabel.text = String(guess)
             }else if guess >= 10 && level == "easy" {
                 color = "0"
-                responseLabel.textColor = UIColor.blackColor()
+                responseLabel.textColor = UIColor.black
                 responseLabel.text = "You may only guess a number between 0 and 50"
                 guess = 0
                 inputLabel.text = String(guess)
@@ -260,47 +260,47 @@ class GameController: UIViewController, AVAudioPlayerDelegate {
     }
 
     
-    @IBAction func deleteButtonClicked(sender: UIButton) {
+    @IBAction func deleteButtonClicked(_ sender: UIButton) {
             inputLabel.text = "0"
             guess = 0
     }
     
-    @IBAction func twitterButtonClicked(sender: AnyObject) {
-        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+    @IBAction func twitterButtonClicked(_ sender: AnyObject) {
+        if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
             let tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             if self.tryNumber == "1" {
             tweetShare.setInitialText("I just guessed the mystery number on my first try in the Hot or Cold app on the \(self.level) level! Think you can beat that?")
             } else {
                 tweetShare.setInitialText("I just guessed the mystery number in only \(self.tryNumber) tries in the Hot or Cold app on the \(self.level) level! Think you can beat that?")
             }
-            self.presentViewController(tweetShare, animated: true, completion: nil)
+            self.present(tweetShare, animated: true, completion: nil)
         } else {
-            let alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to tweet.", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            let alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to tweet.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
 
-    @IBAction func facebookButtonClicked(sender: AnyObject) {
-        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+    @IBAction func facebookButtonClicked(_ sender: AnyObject) {
+        if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
             let fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-            self.presentViewController(fbShare, animated: true, completion: nil)
+            self.present(fbShare, animated: true, completion: nil)
             
         } else {
-            let alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.alert)
             
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
 
     }
     
     func playIncorrectSound(){
-        if let path = NSBundle.mainBundle().pathForResource("negativeSound", ofType: "wav") {
-            let fileURL: NSURL = NSURL(fileURLWithPath: path)
+        if let path = Bundle.main.path(forResource: "negativeSound", ofType: "wav") {
+            let fileURL: URL = URL(fileURLWithPath: path)
             do {
-                try incorrectPlayer = AVAudioPlayer(contentsOfURL: fileURL)
+                try incorrectPlayer = AVAudioPlayer(contentsOf: fileURL)
             } catch {
                 print("error getting incorrectSound to play")
             }
@@ -312,10 +312,10 @@ class GameController: UIViewController, AVAudioPlayerDelegate {
     
     
     func playWinningSound(){
-        if let path = NSBundle.mainBundle().pathForResource("winningSound", ofType: "mp3") {
-            let fileURL: NSURL = NSURL(fileURLWithPath: path)
+        if let path = Bundle.main.path(forResource: "winningSound", ofType: "mp3") {
+            let fileURL: URL = URL(fileURLWithPath: path)
             do {
-                try winningPlayer = AVAudioPlayer(contentsOfURL: fileURL)
+                try winningPlayer = AVAudioPlayer(contentsOf: fileURL)
             } catch {
                 print("error getting incorrectSound to play")
             }

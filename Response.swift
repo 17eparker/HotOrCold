@@ -18,7 +18,7 @@ class Response {
     var color = "0"
     // -3 is ice cube, -2 is freezing, -1 is cold, 0 is warm, 1 is hot, 2 is burning hot, 3 is on fire
     
-    func generateMediumResponse(guess: Int) -> God  {
+    func generateMediumResponse(_ guess: Int) -> God  {
         if tries == 0 {
             level = "medium"
             answer = generateAnswer()
@@ -116,7 +116,7 @@ class Response {
         return godObject
     }
     
-    func generateEasyResponse(guess: Int) -> God  {
+    func generateEasyResponse(_ guess: Int) -> God  {
         if tries == 0 {
             level = "easy"
             answer = generateAnswer()
@@ -215,7 +215,7 @@ class Response {
     }
     
     
-    func generateHardResponse(guess: Int) -> God  {
+    func generateHardResponse(_ guess: Int) -> God  {
         if tries == 0 {
             level = "hard"
             answer = generateAnswer()
@@ -313,7 +313,7 @@ class Response {
         return godObject
     }
     
-    func generateExtremeResponse(guess: Int) -> God  {
+    func generateExtremeResponse(_ guess: Int) -> God  {
         if tries == 0 {
             level = "extreme"
             answer = generateAnswer()
@@ -411,7 +411,7 @@ class Response {
         return godObject
     }
     
-    func findDiff(var1: Int, var2: Int) -> Int {
+    func findDiff(_ var1: Int, var2: Int) -> Int {
         let value = abs(var1 - var2)
         return value
     }

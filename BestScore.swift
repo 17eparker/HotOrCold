@@ -11,59 +11,59 @@ import UIKit
 
 class BestScore {
     
-    static func setBestScoreEasy(newBestScoreEasy: Int) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setInteger(newBestScoreEasy, forKey: "bestScoreKeyEasy")
+    static func setBestScoreEasy(_ newBestScoreEasy: Int) {
+        let defaults = UserDefaults.standard
+        defaults.set(newBestScoreEasy, forKey: "bestScoreKeyEasy")
     }
     
-    static func setBestScoreMedium(newBestScoreMedium: Int) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setInteger(newBestScoreMedium, forKey: "bestScoreKeyMedium")
+    static func setBestScoreMedium(_ newBestScoreMedium: Int) {
+        let defaults = UserDefaults.standard
+        defaults.set(newBestScoreMedium, forKey: "bestScoreKeyMedium")
     }
     
-    static func setBestScoreHard(newBestScoreHard: Int) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setInteger(newBestScoreHard, forKey: "bestScoreKeyHard")
+    static func setBestScoreHard(_ newBestScoreHard: Int) {
+        let defaults = UserDefaults.standard
+        defaults.set(newBestScoreHard, forKey: "bestScoreKeyHard")
     }
     
-    static func setBestScoreExtreme(newBestScoreExtreme: Int) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setInteger(newBestScoreExtreme, forKey: "bestScoreKeyExtreme")
+    static func setBestScoreExtreme(_ newBestScoreExtreme: Int) {
+        let defaults = UserDefaults.standard
+        defaults.set(newBestScoreExtreme, forKey: "bestScoreKeyExtreme")
     }
     
-    static func useBestScore(level: String) -> Int {
-        let defaults = NSUserDefaults.standardUserDefaults()
+    static func useBestScore(_ level: String) -> Int {
+        let defaults = UserDefaults.standard
         if level == "easy" {
-            let currentBestScoreEasy = defaults.objectForKey("bestScoreKeyEasy")
+            let currentBestScoreEasy = defaults.object(forKey: "bestScoreKeyEasy")
             if currentBestScoreEasy == nil {
                 return 0
             } else {
-                let theInt = defaults.integerForKey("bestScoreKeyEasy")
+                let theInt = defaults.integer(forKey: "bestScoreKeyEasy")
                 return theInt
             }
         } else if level == "medium" {
-            let currentBestScoreMedium = defaults.objectForKey("bestScoreKeyMedium")
+            let currentBestScoreMedium = defaults.object(forKey: "bestScoreKeyMedium")
             if currentBestScoreMedium == nil {
                 return 0
             } else {
-                let theInt = defaults.integerForKey("bestScoreKeyMedium")
+                let theInt = defaults.integer(forKey: "bestScoreKeyMedium")
                 return theInt
             }
         } else if level == "hard" {
-            let currentBestScoreHard = defaults.objectForKey("bestScoreKeyHard")
+            let currentBestScoreHard = defaults.object(forKey: "bestScoreKeyHard")
             if currentBestScoreHard == nil {
                 return 0
             } else {
-                let theInt = defaults.integerForKey("bestScoreKeyHard")
+                let theInt = defaults.integer(forKey: "bestScoreKeyHard")
                 return theInt
             }
         } else {
-            let currentBestScoreExtreme = defaults.integerForKey("bestScoreKeyExtreme")
+            let currentBestScoreExtreme = defaults.integer(forKey: "bestScoreKeyExtreme")
             return currentBestScoreExtreme
         }
     }
     
-    static func checkBestScore(tries: Int, level: String) -> Bool {
+    static func checkBestScore(_ tries: Int, level: String) -> Bool {
         var newScore = false
         if level == "easy" {
             if useBestScore("easy") == 0 {
