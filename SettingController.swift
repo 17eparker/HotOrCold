@@ -14,11 +14,11 @@ class SettingsController: UIViewController {
     var soundOn = true
     //self.performSegueWithIdentifier("unwindToMenu", sender: self)
     
-    @IBOutlet weak var easyArrow: UILabel!
+    @IBOutlet weak var hardArrow: UILabel!
     
     @IBOutlet weak var mediumArrow: UILabel!
     
-    @IBOutlet weak var hardArrow: UILabel!
+    @IBOutlet weak var easyArrow: UILabel!
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
