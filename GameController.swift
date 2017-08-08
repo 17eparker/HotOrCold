@@ -35,6 +35,7 @@ class GameController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var deleteButton: UIButton!
     
     @IBOutlet weak var bestScoreLabel: UILabel!
+    @IBOutlet weak var guessField: UITextField!
     
     let response = Response()
     var guess = 0
@@ -194,65 +195,52 @@ class GameController: UIViewController, AVAudioPlayerDelegate {
         reset()
     }
     
-    @IBAction func oneButtonClicked(_ sender: UIButton) {
+    @IBAction func checkInRange(_ sender: Any) {
         if globalWin == false {
-            if guess == 0 {
-                inputLabel.text = sender.titleLabel!.text
-                guess = Int(inputLabel.text!)! //need to change label before setting guess
-            } else if guess > 0 && guess < 10 && level != "easy" {
-                guess = guess * 10 + Int(sender.titleLabel!.text!)!
-                inputLabel.text = String(guess)
-            } else if guess < 5 && level == "easy" {
-                guess = guess * 10 + Int(sender.titleLabel!.text!)!
-                inputLabel.text = String(guess)
-            } else if guess == 5 && Int(sender.titleLabel!.text!)! == 0 && level == "easy" {
-                guess = 50
-                inputLabel.text = String(guess)
-            } else if guess == 10 && Int(sender.titleLabel!.text!)! == 0 && level == "medium" {
-                guess = 100
-                inputLabel.text = String(guess)
-            } else if guess == 10 && Int(sender.titleLabel!.text!)! != 0 && level == "medium" {
+            if self.guess == 0 {
+                self.guess = Int(guessField.text!)! //need to change label before setting guess
+            } else if self.guess > 0 && self.guess < 10 && level != "easy" {
+                self.guess = self.guess * 10 + Int(guessField.text!)!
+            } else if self.guess < 5 && level == "easy" {
+                self.guess = self.guess * 10 + Int(guessField.text!)!
+            } else if self.guess == 5 && Int(guessField.text!)! == 0 && level == "easy" {
+                self.guess = 50
+            } else if self.guess == 10 && Int(guessField.text!)! == 0 && level == "medium" {
+                self.guess = 100
+            } else if self.guess == 10 && Int(guessField.text!)! != 0 && level == "medium" {
                 color = "0"
                 responseLabel.textColor = UIColor.black
                 responseLabel.text = "You may only guess a number between 0 and 100"
-                guess = 0
-                inputLabel.text = String(guess)
-            } else if guess > 10 && level == "medium" {
+                self.guess = 0
+            } else if self.guess > 10 && level == "medium" {
                 color = "0"
                 responseLabel.textColor = UIColor.black
                 responseLabel.text = "You may only guess a number between 0 and 100"
-                guess = 0
-                inputLabel.text = String(guess)
-            } else if guess >= 10 && guess < 100 && level == "hard" {
-                guess = guess * 10 + Int(sender.titleLabel!.text!)!
-                inputLabel.text = String(guess)
-            } else if guess == 100 && Int(sender.titleLabel!.text!)! == 0 && level == "hard" {
-                guess = 1000
-                inputLabel.text = String(guess)
-            } else if guess > 100 && level == "hard" {
+                self.guess = 0
+            } else if self.guess >= 10 && self.guess < 100 && level == "hard" {
+                self.guess = self.guess * 10 + Int(guessField.text!)!
+            } else if self.guess == 100 && Int(guessField.text!)! == 0 && level == "hard" {
+                self.guess = 1000
+            } else if self.guess > 100 && level == "hard" {
                 color = "0"
                 responseLabel.textColor = UIColor.black
                 responseLabel.text = "You may only guess a number between 0 and 1000"
-                guess = 0
-                inputLabel.text = String(guess)
-            } else if guess == 5 && Int(sender.titleLabel!.text!)! != 0 && level == "easy" {
+                self.guess = 0
+            } else if self.guess == 5 && Int(guessField.text!)! != 0 && level == "easy" {
                 color = "0"
                 responseLabel.textColor = UIColor.black
                 responseLabel.text = "You may only guess a number between 0 and 50"
-                guess = 0
-                inputLabel.text = String(guess)
-            } else if guess > 5 && level == "easy" {
+                self.guess = 0
+            } else if self.guess > 5 && level == "easy" {
                 color = "0"
                 responseLabel.textColor = UIColor.black
                 responseLabel.text = "You may only guess a number between 0 and 50"
-                guess = 0
-                inputLabel.text = String(guess)
-            }else if guess >= 10 && level == "easy" {
+                self.guess = 0
+            }else if self.guess >= 10 && level == "easy" {
                 color = "0"
                 responseLabel.textColor = UIColor.black
                 responseLabel.text = "You may only guess a number between 0 and 50"
-                guess = 0
-                inputLabel.text = String(guess)
+                self.guess = 0
             } else {
                 responseLabel.text = "This is a bug. pls tell App Developer!"
             }
@@ -327,8 +315,8 @@ class GameController: UIViewController, AVAudioPlayerDelegate {
     
     
     func reset() {
-        lastGuessLabel.text = inputLabel.text
+        lastGuessLabel.text = guessField.text
         guess = 0
-        inputLabel.text = String(guess)
+        guessField.text = String("")
     }
 }
