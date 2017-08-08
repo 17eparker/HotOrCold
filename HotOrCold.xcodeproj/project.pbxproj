@@ -141,21 +141,12 @@
 			isa = PBXGroup;
 			children = (
 				7829E8841DED2E8800755D83 /* Info.plist */,
-				782401CB1CD147D7000B1026 /* AppDelegate.swift */,
-				783212B61DD13FC2001CDEB3 /* Assets.xcassets */,
-				782401CD1CD147D7000B1026 /* Base.lproj */,
+				782401E31CD1485D000B1026 /* Main.storyboard */,
 				78556FC61CE3B70C00F8C510 /* Images */,
 				782401E91CD14CD5000B1026 /* Sounds */,
-				782401CF1CD147D7000B1026 /* GameController.swift */,
-				782401D01CD147D7000B1026 /* godVariable.swift */,
-				782401D11CD147D7000B1026 /* HomeController.swift */,
-				782401E31CD1485D000B1026 /* Main.storyboard */,
-				7865CEFD1DA6D67D00E71B64 /* BestScoreController.swift */,
-				787DC3531D789BE9002DDDA8 /* BestScore.swift */,
-				782401D31CD147D7000B1026 /* Response.swift */,
-				782401D41CD147D7000B1026 /* RuleController.swift */,
-				782401D51CD147D7000B1026 /* SettingController.swift */,
-				782401D61CD147D7000B1026 /* ViewController.swift */,
+				78DCF58F1F16AEB0004274D1 /* View Controllers */,
+				78DCF5901F16AEBF004274D1 /* Model */,
+				78DCF58E1F16AAAD004274D1 /* Supporting Files */,
 			);
 			name = HotOrCold;
 			sourceTree = "<group>";
@@ -176,6 +167,39 @@
 				78CF494C1DB69F5400D48EFD /* fblogo.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		78DCF58E1F16AAAD004274D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				782401CB1CD147D7000B1026 /* AppDelegate.swift */,
+				782401CD1CD147D7000B1026 /* Base.lproj */,
+				783212B61DD13FC2001CDEB3 /* Assets.xcassets */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		78DCF58F1F16AEB0004274D1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				782401CF1CD147D7000B1026 /* GameController.swift */,
+				7865CEFD1DA6D67D00E71B64 /* BestScoreController.swift */,
+				782401D41CD147D7000B1026 /* RuleController.swift */,
+				782401D11CD147D7000B1026 /* HomeController.swift */,
+				782401D51CD147D7000B1026 /* SettingController.swift */,
+				782401D61CD147D7000B1026 /* ViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		78DCF5901F16AEBF004274D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				782401D01CD147D7000B1026 /* godVariable.swift */,
+				787DC3531D789BE9002DDDA8 /* BestScore.swift */,
+				782401D31CD147D7000B1026 /* Response.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,17 +272,18 @@
 					782401961CD13790000B1026 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = B8C8Q433C7;
+						LastSwiftMigration = 0830;
 					};
 					782401AA1CD13791000B1026 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = WLG5BW65Y7;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0830;
 						TestTargetID = 782401961CD13790000B1026;
 					};
 					782401B51CD13791000B1026 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = WLG5BW65Y7;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0830;
 						TestTargetID = 782401961CD13790000B1026;
 					};
 				};
@@ -486,7 +511,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.parker.hotorcold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -506,7 +531,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.parker.hotorcold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -518,7 +543,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Castilleja.HotOrColdTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HotOrCold.app/HotOrCold";
 			};
 			name = Debug;
@@ -531,7 +556,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Castilleja.HotOrColdTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HotOrCold.app/HotOrCold";
 			};
 			name = Release;
@@ -543,7 +568,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Castilleja.HotOrColdUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = HotOrCold;
 				USES_XCTRUNNER = YES;
 			};
@@ -556,7 +581,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Castilleja.HotOrColdUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = HotOrCold;
 				USES_XCTRUNNER = YES;
 			};
